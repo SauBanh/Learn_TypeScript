@@ -2,7 +2,7 @@
 
 ## Core type
 
-### How to run the file
+### How to run the file ( Use with windows operating system )
 
 1. tsc.cmd <namefile.ts>: command to run typescript interpreter
 
