@@ -1,23 +1,39 @@
-# Learn_TypeScript
+# Learn TypeScript
 
 ## Core type
 
-### how to run the file
+### How to run the file
 
--   tsc.cmd <namefile.ts>: command to run typescript interpreter
--   tsc.cmd -w (-w is watch): used to view compiled files in the terminal window
--   tsc --init: generate configuration file for typescript as json extension
+1. tsc.cmd <namefile.ts>: command to run typescript interpreter
 
-### typescript data types
+```c
+tsc.cmd <namefile.ts>
+```
 
--   number: | All numbers, no differentiation between integers or floats
--   string: "Hi, i'm Nguyễn Tuấn Anh" | All text values
--   boolean: true, false | just these two, no "truthy" or "falsy" values
--   object: {age: 30} | Any javascript object, more specific types (type of object) are possible
--   Array: [1, 2, 3] | Any javascript array, type can be flexible or strict (regarding the element type)
--   Tuple: [1, 2] | Added by Typescript: Fixed-length array
--   Enum: enum {NEW,OLD} | Added by TypeScript: Automatically enumerated global constant indentifiers
--   Any: \* | Any kind of value, no specific type assignment
+2. tsc.cmd -w (-w is watch): used to view compiled files in the terminal window
+
+```c
+tsc.cmd -w
+```
+
+3. tsc --init: generate configuration file for typescript as json extension
+
+```c
+tsc --init
+```
+
+### Typescript data types
+
+| Datatypes | Example                   | Description                                                                       |
+| --------- | ------------------------- | --------------------------------------------------------------------------------- |
+| number    | All numbers               | No differentiation between integers or floats                                     |
+| string    | "Hi, i'm Nguyễn Tuấn Anh" | All text valuesfloats                                                             |
+| boolean   | true, false               | just these two, no "truthy" or "falsy" values                                     |
+| object    | {age: 30}                 | Any javascript object, more specific types (type of object) are possible          |
+| Array     | [1, 2, 3]                 | Any javascript array, type can be flexible or strict (regarding the element type) |
+| Tuple     | [1, 2]                    | Added by Typescript: Fixed-length array                                           |
+| Enum      | enum {NEW,OLD}            | dded by TypeScript: Automatically enumerated global constant indentifiers         |
+| Any       | \*                        | Any kind of value, no specific type assignment                                    |
 
 ---
 
@@ -48,7 +64,7 @@ console.log(preson.name);
 
 ---
 
-JavaScript object:
+### JavaScript object:
 
 ```c
 const product = {
@@ -202,7 +218,7 @@ if (prerson.role === Role.AUTHOR) {
 
 ---
 
-Literal Type
+### Literal Type
 
 ```c
 function combine(
@@ -239,7 +255,7 @@ console.log(combinedNames);
 
 ---
 
-Literal Types
+### Literal Types
 
 ```c
 type Combinable = number | string;
@@ -279,7 +295,7 @@ console.log(combinedNames);
 
 ---
 
-## Function Return Type & "void": void does not return anything
+### Function Return Type & "void": void does not return anything
 
 -   if we use the return value of a function that doesn't return anything we will get undefined value
 
@@ -351,7 +367,7 @@ addAddHandle(10, 20, (result) => {
 
 ---
 
-## The "unknown" Type
+### The "unknown" Type
 
 ```c
 let userInput: unknown;
@@ -367,7 +383,7 @@ if (typeof userInput === "string") {
 
 ---
 
-## the "never" Type
+### The "never" Type
 
 ```c
 let userInput: unknown;
@@ -389,13 +405,13 @@ console.log(result);
 
 ---
 
-## config
+## Config
 
 -   configure interpreter ts . files
 -   in exclude will remove the files recorded here will not compile
 -   in include will compile all files configured in here and if not declare include will automatically run all existing files
 
-### exam config in file tsconfig.json
+### Exam config in file tsconfig.json
 
 ```c
     "exclude": [
