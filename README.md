@@ -1,8 +1,31 @@
 # Learn TypeScript
 
+# Table of Contents
+
+-   [Learn TypeScript](#learn-typescript)
+-   [Table of Contents](#table-of-contents)
+    -   [Core type](#core-type)
+        -   [How to run the file](#how-to-run-the-file)
+        -   [Typescript data types](#typescript-data-types)
+        -   [Code Examples](#code-examples)
+        -   [Object](#object)
+        -   [Literal Type](#literal-type)
+        -   [Literal Types](#literal-types)
+        -   [Function Return Type](#function-return-type)
+    -   [Function as Types](#function-as-types)
+    -   [Function Type \& Callbacks](#function-type--callbacks)
+        -   [The "unknown" Type](#the-unknown-type)
+        -   [The "never" Type](#the-never-type)
+    -   [Config](#config)
+        -   [Exam config in file tsconfig.json](#exam-config-in-file-tsconfigjson)
+
 ## Core type
 
-### How to run the file ( Use with windows operating system )
+---
+
+### How to run the file
+
+Important: These commands are only for `windows`
 
 1. tsc.cmd <namefile.ts>: command to run typescript interpreter
 
@@ -37,6 +60,8 @@ tsc --init
 
 ---
 
+### Code Examples
+
 ```c
 function add(n1: number, n2: number, n3: string, n4: boolean) {
     if (typeof n1 !== "number" || typeof n2 !== "number") {
@@ -64,7 +89,7 @@ console.log(preson.name);
 
 ---
 
-### JavaScript object:
+### Object
 
 ```c
 const product = {
@@ -295,7 +320,9 @@ console.log(combinedNames);
 
 ---
 
-### Function Return Type & "void": void does not return anything
+### Function Return Type
+
+> Function Return Type & "void": void does not return anything
 
 -   if we use the return value of a function that doesn't return anything we will get undefined value
 
@@ -425,4 +452,8 @@ console.log(result);
         "app.ts", //* used to run the compiled file of the app.ts . file
         "analytics.ts", //* used to run the compiled file of the analytics.ts . file
     ]
+```
+
+```
+
 ```
