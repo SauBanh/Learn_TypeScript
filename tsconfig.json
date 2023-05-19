@@ -107,9 +107,6 @@
         "skipLibCheck": true /* Skip type checking all .d.ts files. */
     },
     "exclude": [
-        "analytics.ts", //* use this won't run file analytics.ts
-        "analytics.dev.ts", //* use this won't run file analytics.dev.ts
-        "*.dev.ts", //? use this won't run all file .dev.ts
-        "**/*.dev.ts" //? use this won't run all file in all folder .dev.ts
+        "node_modules" //! would be the default
     ]
 }

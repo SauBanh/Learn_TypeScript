@@ -1,19 +1,26 @@
 # Learn_TypeScript
+
 ## Core type
+
 ### how to run the file
-* tsc.cmd <namefile.ts>: command to run typescript interpreter
-* tsc.cmd -w (-w is watch): used to view compiled files in the terminal window
-* tsc --init: generate configuration file for typescript as json extension
+
+-   tsc.cmd <namefile.ts>: command to run typescript interpreter
+-   tsc.cmd -w (-w is watch): used to view compiled files in the terminal window
+-   tsc --init: generate configuration file for typescript as json extension
+
 ### typescript data types
-* number: | All numbers, no differentiation between integers or floats
-* string: "Hi, i'm Nguyễn Tuấn Anh" | All text values
-* boolean: true, false | just these two, no "truthy" or "falsy" values
-* object: {age: 30} | Any javascript object, more specific types (type of object) are possible
-* Array: [1, 2, 3] | Any javascript array, type can be flexible or strict (regarding the element type)
-* Tuple: [1, 2] | Added by Typescript: Fixed-length array
-* Enum: enum {NEW,OLD} | Added by TypeScript: Automatically enumerated global constant indentifiers
-* Any: * | Any kind of value, no specific type assignment
-***
+
+-   number: | All numbers, no differentiation between integers or floats
+-   string: "Hi, i'm Nguyễn Tuấn Anh" | All text values
+-   boolean: true, false | just these two, no "truthy" or "falsy" values
+-   object: {age: 30} | Any javascript object, more specific types (type of object) are possible
+-   Array: [1, 2, 3] | Any javascript array, type can be flexible or strict (regarding the element type)
+-   Tuple: [1, 2] | Added by Typescript: Fixed-length array
+-   Enum: enum {NEW,OLD} | Added by TypeScript: Automatically enumerated global constant indentifiers
+-   Any: \* | Any kind of value, no specific type assignment
+
+---
+
 ```c
 function add(n1: number, n2: number, n3: string, n4: boolean) {
     if (typeof n1 !== "number" || typeof n2 !== "number") {
@@ -38,8 +45,11 @@ const preson: {
 
 console.log(preson.name);
 ```
-***
+
+---
+
 JavaScript object:
+
 ```c
 const product = {
   id: 'abc1',
@@ -62,7 +72,9 @@ This would be the type of such an object:
   }
 }
 ```
-***
+
+---
+
 ```c
 let favoriteActivities: string[];
 favoriteActivities = ["Thể thao"];
@@ -75,7 +87,9 @@ const prerson = {
     hobbies: ["Thể thao", "Đọc sách"],
 };
 ```
-***
+
+---
+
 ```c
 const prerson: {
     name: string;
@@ -103,7 +117,9 @@ for (const hobby of prerson.hobbies) {
     // console.log(hobby.map()); // !!! ERROR !!!
 }
 ```
-***
+
+---
+
 ```c
 // const ADMIN = 0;
 // const READ_ONLY = 1;
@@ -142,7 +158,9 @@ if (prerson.role === Role.AUTHOR) {
     console.log("is author");
 }
 ```
-***
+
+---
+
 ```c
 // const ADMIN = 0;
 // const READ_ONLY = 1;
@@ -181,8 +199,11 @@ if (prerson.role === Role.AUTHOR) {
     console.log("is author");
 }
 ```
-***
+
+---
+
 Literal Type
+
 ```c
 function combine(
     input1: number | string,
@@ -215,8 +236,11 @@ console.log(combinedStringAges);
 const combinedNames = combine("Nguyễn", "Tuấn Anh", "as-text");
 console.log(combinedNames);
 ```
-***
+
+---
+
 Literal Types
+
 ```c
 type Combinable = number | string;
 type ConversionDescriptor = "as-number" | "as-text";
@@ -252,9 +276,13 @@ console.log(combinedStringAges);
 const combinedNames = combine("Nguyễn", "Tuấn Anh", "as-text");
 console.log(combinedNames);
 ```
-***
+
+---
+
 ## Function Return Type & "void": void does not return anything
-* if we use the return value of a function that doesn't return anything we will get undefined value
+
+-   if we use the return value of a function that doesn't return anything we will get undefined value
+
 ```c
 function add(n1: number, n2: number) {
     return n1 + n2;
@@ -266,8 +294,11 @@ function printResult(num: number): void {
 
 printResult(add(5, 12));
 ```
-***
+
+---
+
 ## Function as Types
+
 ```c
  function add(n1: number, n2: number) {
     return n1 + n2;
@@ -286,8 +317,11 @@ combineValues = add;
 
 console.log(combineValues(8, 8));
 ```
-***
+
+---
+
 ## Function Type & Callbacks
+
 ```c
 function add(n1: number, n2: number) {
     return n1 + n2;
@@ -314,8 +348,11 @@ addAddHandle(10, 20, (result) => {
     console.log(result);
 });
 ```
-***
+
+---
+
 ## The "unknown" Type
+
 ```c
 let userInput: unknown;
 let userName: string;
@@ -327,8 +364,11 @@ if (typeof userInput === "string") {
     userName = userInput;
 }
 ```
-***
+
+---
+
 ## the "never" Type
+
 ```c
 let userInput: unknown;
 let userName: string;
@@ -346,12 +386,17 @@ function generateError(message: string, code: number): never {
 const result = generateError("An error occurred!", 500);
 console.log(result);
 ```
-***
-## config 
-* configure interpreter ts . files
-* in exclude will remove the files recorded here will not compile
-* in include will compile all files configured in here and if not declare include will automatically run all existing files
+
+---
+
+## config
+
+-   configure interpreter ts . files
+-   in exclude will remove the files recorded here will not compile
+-   in include will compile all files configured in here and if not declare include will automatically run all existing files
+
 ### exam config in file tsconfig.json
+
 ```c
     "exclude": [
         "analytics.ts", //* use this won't run file analytics.ts
